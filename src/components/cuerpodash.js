@@ -1,6 +1,7 @@
 import React from "react";
-import Menusuperior from "./menuspuerior"
-import Graficosdash from "./graficosdash"
+import Menusuperior from "./menuspuerior";
+import Graficosdash from "./graficosdash";
+import ProductosEnStock from "./productosEnStock";
 
 function Cuerpodash() {
   return (
@@ -8,7 +9,7 @@ function Cuerpodash() {
 
         <Menusuperior/>
         <Graficosdash/>
-
+      
 
     </div>    
   

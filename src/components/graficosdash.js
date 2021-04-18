@@ -1,8 +1,10 @@
 import React from "react";
+import ProductosEnStock from "./productosEnStock";
 
-
-function Graficosdash() {
-  return (
+function Graficosdash () {
+ 
+  
+    return (
 
     <div class="container-fluid">
 
@@ -14,24 +16,12 @@ function Graficosdash() {
     {/* Content Row*/}
     <div class="row">
 
-           {/*Amount of Products in DB */}
-        <div class="col-md-4 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"> Cantidad de Productos en Stock</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">135</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+           {/*Amount of Products in DB  - PUEDE ESER UN COMPONENTE*/}
+            {/*PRODUCTOS EN STOCK*/}
+            <ProductosEnStock/>
+       
 
-    {/* $$$ of all products in DB*/}
+    {/* $$$ of all products in DB* -PUEDE ESER UN COMPONENTE*/}
        
         <div class="col-md-4 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
@@ -39,7 +29,7 @@ function Graficosdash() {
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1"> Cantidad de Usuarios</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">$546.456</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">VA ALGO</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -49,7 +39,7 @@ function Graficosdash() {
             </div>
         </div>
 
-       {/* Amount of users in DB*/}
+       {/* Amount of users in DB  -PUEDE ESER UN COMPONENTE*/}
         <div class="col-md-4 mb-4">
             <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
@@ -57,7 +47,7 @@ function Graficosdash() {
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Familias Relevantes
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">38</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">va algo</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-user-check fa-2x text-gray-300"></i>
@@ -68,7 +58,7 @@ function Graficosdash() {
         </div>
     </div>
 
-    {/* Content Row */}
+    {/* Content Row  -PUEDE ESER UN COMPONENTE*/}
     <div class="row">
         {/* Last Product in DB*/}
         <div class="col-lg-6 mb-4">
@@ -86,7 +76,7 @@ function Graficosdash() {
             </div>
         </div>
 
-        {/* Categories in DB */}
+        {/* Categories in DB  -PUEDE ESER UN COMPONENTE*/}
         <div class="col-lg-6 mb-4">						
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -145,5 +135,6 @@ function Graficosdash() {
    
   );
 }
+
 
 export default Graficosdash;
