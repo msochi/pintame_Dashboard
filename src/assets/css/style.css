@@ -244,13 +244,17 @@
  }
  .interiorTarjeta{
   display:flex;
-  flex-wrap: wrap ;
+ align-items: center;
 
  }
  .imagencard{
    display: flex;
+   flex-wrap: wrap;
    height: 100%;
    
+ }
+ .textoTarjeta{
+   text-align: left;
  }
 
  a.consola{

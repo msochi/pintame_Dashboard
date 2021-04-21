@@ -12,7 +12,7 @@ function run(props) {
     {result.map(tipo => <div class="col-lg-12 mb-12" id= "categorias">
                             <div class="card bg-info text-white shadow">
                                 <div class="card-body">
-                                    <p> <strong><u>Categoría </u> : </strong> { tipo[0] }</p>
+                                    <p> <strong><u>Categoría </u> : </strong> { tipo[0] }.</p>
                                     <p><strong><u>Cantidad </u> : </strong> {tipo[1]}</p> 
                                 </div>
                             </div>

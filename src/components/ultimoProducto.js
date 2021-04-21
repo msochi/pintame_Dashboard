@@ -54,10 +54,10 @@ render(){
                     <div>
                     
                     <p> <strong><u>Sku N° </u> : </strong> {ultimoProducto.sku}</p>
-                    <p><strong><u>Marca</u> : </strong>: {ultimoProducto.id_marca}</p>                   
-                    <p><strong><u>Título</u> : </strong>:{ultimoProducto.titulo_producto}</p>
-                    <p><strong><u>Precio</u> : </strong>: $ {ultimoProducto.precio}</p>
-                    <p><strong><u>Costo</u> : </strong>: $ {ultimoProducto.costo}</p>
+                    <p><strong><u>Marca</u> : </strong> {ultimoProducto.id_marca}</p>                   
+                    <p><strong><u>Título</u> : </strong>{ultimoProducto.titulo_producto}</p>
+                    <p><strong><u>Precio</u> : </strong> $ {ultimoProducto.precio}</p>
+                    <p><strong><u>Costo</u> : </strong> $ {ultimoProducto.costo}</p>
                     <div className= "botondash">
                     <button className= "botonActualizar" >Actualizar</button>
                     </div>
