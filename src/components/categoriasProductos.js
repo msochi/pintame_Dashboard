@@ -1,7 +1,25 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
 
+function run(props) {
+    console.log(props)
+    var result = Object.keys(props).map((key) => [key, props[key]]);
 
+    console.log(result);
+
+    return (
+    <div class="row">
+    {result.map(tipo => <div class="col-lg-6 mb-4">
+                            <div class="card bg-info text-white shadow">
+                                <div class="card-body">
+                                    {tipo[0] + " " + "Cantidad: " + tipo[1]} 
+                                </div>
+                            </div>
+                        </div>)}
+    </div>
+    );
+
+}
 class categoriasProductos extends React.Component {
 
     constructor(props) {
@@ -15,6 +33,7 @@ class categoriasProductos extends React.Component {
         }
     }
 
+    
         componentDidMount = () => {
         fetch("https://pintame.herokuapp.com/apis/productos")
             .then(response => response.json())
@@ -38,10 +57,6 @@ class categoriasProductos extends React.Component {
             }) 
         }
 
-       
-   
-        
-   
        // {this.state.tipoProducto.map((tipoProducto,index)=>{ return(<li key={`data-${index}`}> {tipoProducto}</li> )})}
  
 render(){
@@ -59,59 +74,11 @@ render(){
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="card bg-info text-white shadow">
-                                <div class="card-body">
-                                  <ul>JERO LA ROMPE
-                                  
-                                  </ul>]
-                 
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card bg-info text-white shadow">
-                                <div class="card-body">
-                                    Category 02
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card bg-info text-white shadow">
-                                <div class="card-body">
-                                    Category 03
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card bg-info text-white shadow">
-                                <div class="card-body">
-                                    Category 04
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card bg-info text-white shadow">
-                                <div class="card-body">
-                                    Category 05
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mb-4">
-                            <div class="card bg-info text-white shadow">
-                                <div class="card-body">
-                                    Category 06
-                                </div>
-                            </div>
+                            {run(tipoProducto)}
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-            
-            
-            
+            </div>            
             );
 
         }    

@@ -24,7 +24,7 @@ class ultimoUsuario extends React.Component {
                 this.setState({
                     isLoaded: true,
                     usuarios: data.data,
-                    ultimoUsuario: ultimo,                    
+                    ultimoUsuario: ultimo,
                 })
             })
             .catch(error =>{
@@ -39,7 +39,7 @@ class ultimoUsuario extends React.Component {
 render(){
     
         console.log("estoy renderizando prod");
-       const { error, isLoaded, productos, ultimoUsuario } = this.state;   
+       const { error, isLoaded, productos, ultimoUsuario, localidad, provincia } = this.state;   
      
         return (
             <div class="col-lg-6 mb-4">
@@ -48,7 +48,9 @@ render(){
                     <h6 class="m-0 font-weight-bold text-primary">Último Usuario Generado</h6>
                 </div>
                 <div class="card-body">
-                   
+                    <div class="text-center">
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style= {{width: "25rem"}} src={"https://pintame.herokuapp.com/uploadsAvatars/"+ultimoUsuario.avatar }  alt="{ultimoUsuario.avatar}"/>
+					</div>
                     <div>
                     <p></p>
                     <p>Nombre: {ultimoUsuario.nombre} </p>
