@@ -49,7 +49,7 @@ render(){
                 </div>
                 <div class="card-body">
                     <div class="text-center">
-						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style= {{width: "25rem"}} src={"https://pintame.herokuapp.com/uploadsAvatars/"+ultimoUsuario.avatar }  alt="{ultimoUsuario.avatar}"/>
+						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style= {{width: "10rem"}} src={"https://pintame.herokuapp.com/uploadsAvatars/"+ultimoUsuario.avatar }  alt="{ultimoUsuario.avatar}"/>
 					</div>
                     <div>
                     <p></p>
