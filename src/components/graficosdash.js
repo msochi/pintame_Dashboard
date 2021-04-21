@@ -5,6 +5,7 @@ import TipoDeStock from "./tipoDeProductosStock";
 import UltimoProducto from "./ultimoProducto";
 import UltimoUsuario from "./ultimoUsuario";
 import CategoriasProducto from "./categoriasProductos";
+import ListaProductos from "./listaProductos";
 
 function Graficosdash () {
  
@@ -41,6 +42,12 @@ function Graficosdash () {
         {/* Categories in DB  -PUEDE ESER UN COMPONENTE*/}
        
     </div>
+    <div>
+        <ListaProductos />
+        </div>    
+
+
+
 </div>
    
   );

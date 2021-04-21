@@ -1,9 +1,9 @@
-import React, {Component} from "react";
-import PropTypes from "prop-types";
+import React from "react";
+
 
 function run(props) {
     console.log(props)
-    var result = Object.keys(props).map((key) => [key, props[key]]);
+   var result = Object.keys(props).map((key) => [key, props[key]]); 
 
     console.log(result);
 
