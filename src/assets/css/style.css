@@ -90,6 +90,7 @@
  p {
    margin-top: 0;
    margin-bottom: 1rem;
+   font-size:20px;
  }
  
  abbr[title],
@@ -241,7 +242,17 @@
    outline: 1px dotted;
    outline: 5px auto -webkit-focus-ring-color;
  }
- 
+ .interiorTarjeta{
+  display:flex;
+  flex-wrap: wrap ;
+
+ }
+ .imagencard{
+   display: flex;
+   height: 100%;
+   
+ }
+
  a.consola{
    color:white;
    font-size:small;

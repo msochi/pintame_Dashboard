@@ -52,11 +52,12 @@ render(){
 						<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style= {{width: "15rem"}} src={"https://pintame.herokuapp.com/imagen_producto/"+ultimoProducto.imagen_producto }  alt="{ultimoProducto.imagen_producto}"/>
 					</div>
                     <div>
-                    <p></p>
-                    <p>Sku N°: {ultimoProducto.sku}</p>
-                    <p>Marca: {ultimoProducto.id_marca}</p>
-                    <p>Precio: $ {ultimoProducto.precio}</p>
-                    <p>Título:{ultimoProducto.titulo_producto}</p>
+                    
+                    <p> <strong><u>Sku N° </u> : </strong> {ultimoProducto.sku}</p>
+                    <p><strong><u>Marca</u> : </strong>: {ultimoProducto.id_marca}</p>                   
+                    <p><strong><u>Título</u> : </strong>:{ultimoProducto.titulo_producto}</p>
+                    <p><strong><u>Precio</u> : </strong>: $ {ultimoProducto.precio}</p>
+                    <p><strong><u>Costo</u> : </strong>: $ {ultimoProducto.costo}</p>
                     <div className= "botondash">
                     <button className= "botonActualizar" >Actualizar</button>
                     </div>

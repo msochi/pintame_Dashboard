@@ -53,12 +53,12 @@ render(){
 					</div>
                     <div>
                     <p></p>
-                    <p>Nombre: {ultimoUsuario.nombre} </p>
-                    <p>Apellido: {ultimoUsuario.apellido} </p>
-                    <p>localidad: {ultimoUsuario.id_localidad} </p>
-                    <p>Provincia: {ultimoUsuario.id_provincia} </p>
-                    <p>Teléfono: {ultimoUsuario.telefono} </p>
-                    <p>Email: {ultimoUsuario.email} </p>
+                    <p><strong><u>Nombre</u> : </strong> {ultimoUsuario.nombre} </p>
+                    <p><strong><u>Apellido</u> : </strong> {ultimoUsuario.apellido} </p>
+                    <p><strong><u>localidad</u> : </strong> {ultimoUsuario.id_localidad} </p>
+                    <p><strong><u>Provincia</u> : </strong> {ultimoUsuario.id_provincia} </p>
+                    <p><strong><u>Teléfono</u> : </strong> {ultimoUsuario.telefono} </p>
+                    <p><strong><u>Email</u> : </strong> {ultimoUsuario.email} </p>
                     
                     <div className= "botondash">
                     <button className= "botonActualizar">Actualizar</button>
