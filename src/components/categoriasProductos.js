@@ -9,10 +9,11 @@ function run(props) {
 
     return (
     <div class="row">
-    {result.map(tipo => <div class="col-lg-6 mb-4">
+    {result.map(tipo => <div class="col-lg-12 mb-12" id= "categorias">
                             <div class="card bg-info text-white shadow">
                                 <div class="card-body">
-                                    {tipo[0] + " " + "Cantidad: " + tipo[1]} 
+                                    <p> <strong><u>Categoría </u> : </strong> { tipo[0] }.</p>
+                                    <p><strong><u>Cantidad </u> : </strong> {tipo[1]}</p> 
                                 </div>
                             </div>
                         </div>)}
@@ -67,12 +68,12 @@ render(){
     
         return (
 
-            <div class="col-lg-6 mb-4">						
+            <div class="col-lg-12 mb-4">						
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Categorias</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">CATEGORIAS</h6>
                 </div>
-                <div class="card-body">
+                <div class="card-body " >
                     <div class="row">
                             {run(tipoProducto)}
                         </div>
