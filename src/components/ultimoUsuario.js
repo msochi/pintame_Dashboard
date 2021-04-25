@@ -15,21 +15,36 @@ class ultimoUsuario extends React.Component {
     }
 
     componentDidMount = () => {
+        //Traigo todos los users
         fetch("https://pintame.herokuapp.com/apis/usuarios")
             .then(response => response.json())
             .then(data => {
             
             let ultimo = data.data.users.pop();
             console.log(ultimo)
-               console.log(data)
-               console.log(ultimo)
-                this.setState({
-                    isLoaded: true,
-                    usuarios: data.data,
-                    ultimoUsuario: ultimo,
-                    localidad: ultimo.localidades[0],
-                    provincia: {id: 1, provincia: "Buenos Aires"}
-                })
+                    //Traigo la provincia del ultimo user con el id_provincia de el api call anterior
+                fetch("https://pintame.herokuapp.com/apis/usuarios/provincia/"+ultimo.id_provincia)
+                .then(response => response.json())
+                .then(data2 => {
+                let ultimo2 = data2.respuesta.data.provincia;
+                console.log(ultimo2)
+
+                //Traigo la localidad del ultimo user con el id_localidad de el api call anterior
+                fetch("https://pintame.herokuapp.com/apis/usuarios/localidad/"+ultimo.id_localidad)
+                .then(response => response.json())
+                .then(data3 => {
+                let ultimo3 = data3.respuesta.data.localidad;
+                console.log(ultimo3)
+                    this.setState({
+                        isLoaded: true,
+                        usuarios: data.data,
+                        ultimoUsuario: ultimo,
+                        localidad: ultimo3,
+                        provincia: ultimo2
+                    })
+                
+                })           
+            })            
             })
             .catch(error =>{
                 console.log(error)
@@ -37,7 +52,9 @@ class ultimoUsuario extends React.Component {
                     isLoaded: true,
                     error
                   });
-            }) 
+            })
+            
+             
     }
  
 render(){
@@ -59,7 +76,7 @@ render(){
                     <p></p>
                     <p><strong><u>Nombre</u> : </strong> {ultimoUsuario.nombre} </p>
                     <p><strong><u>Apellido</u> : </strong> {ultimoUsuario.apellido} </p>
-                    <p><strong><u>localidad</u> : </strong> {localidad.localidad} </p>
+                    <p><strong><u>Localidad</u> : </strong> {localidad.localidad} </p>
                     <p><strong><u>Provincia</u> : </strong> {provincia.provincia} </p>
                     <p><strong><u>Teléfono</u> : </strong> {ultimoUsuario.telefono} </p>
                     <p><strong><u>Email</u> : </strong> {ultimoUsuario.email} </p>
