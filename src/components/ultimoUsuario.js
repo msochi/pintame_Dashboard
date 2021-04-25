@@ -9,6 +9,8 @@ class ultimoUsuario extends React.Component {
             loading: true,
             usuarios: {},
             ultimoUsuario:{},
+            localidad: {},
+            provincia: {}
         }
     }
 
@@ -18,13 +20,15 @@ class ultimoUsuario extends React.Component {
             .then(data => {
             
             let ultimo = data.data.users.pop();
-             
+            console.log(ultimo)
                console.log(data)
                console.log(ultimo)
                 this.setState({
                     isLoaded: true,
                     usuarios: data.data,
                     ultimoUsuario: ultimo,
+                    localidad: ultimo.localidades[0],
+                    provincia: {id: 1, provincia: "Buenos Aires"}
                 })
             })
             .catch(error =>{
@@ -55,8 +59,8 @@ render(){
                     <p></p>
                     <p><strong><u>Nombre</u> : </strong> {ultimoUsuario.nombre} </p>
                     <p><strong><u>Apellido</u> : </strong> {ultimoUsuario.apellido} </p>
-                    <p><strong><u>localidad</u> : </strong> {ultimoUsuario.id_localidad} </p>
-                    <p><strong><u>Provincia</u> : </strong> {ultimoUsuario.id_provincia} </p>
+                    <p><strong><u>localidad</u> : </strong> {localidad.localidad} </p>
+                    <p><strong><u>Provincia</u> : </strong> {provincia.provincia} </p>
                     <p><strong><u>Teléfono</u> : </strong> {ultimoUsuario.telefono} </p>
                     <p><strong><u>Email</u> : </strong> {ultimoUsuario.email} </p>
                     
