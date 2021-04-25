@@ -274,8 +274,21 @@
   align-items: center;
   
 }
-
-
+@media (max-width: 375px){
+button.vueltaConsola{
+  background-color: #F72585;
+  color: white;
+  border-radius: 5px; 
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  color: white;
+  align-items: center;
+  margin-left: -55%;
+  font-size: 10px;
+  
+}
+}
 
 div.botondash{
   position: relative;

@@ -56,7 +56,13 @@ class ultimoUsuario extends React.Component {
             
              
     }
- 
+    refresh = () => {
+        // re-renders the component
+        window.location.reload(false);;
+      };
+    
+
+
 render(){
     
         console.log("estoy renderizando prod");
@@ -82,7 +88,7 @@ render(){
                     <p><strong><u>Email</u> : </strong> {ultimoUsuario.email} </p>
                     
                     <div className= "botondash">
-                    <button className= "botonActualizar">Actualizar</button>
+                    <button className= "botonActualizar" onClick={ this.refresh }>Actualizar</button>
                     </div>
                     </div>
                 </div>

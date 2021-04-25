@@ -3,6 +3,11 @@ import React from "react";
 
 class ultimoProducto extends React.Component {
 
+    refresh = () => {
+        // re-renders the component
+        this.setState({});
+      };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -39,6 +44,13 @@ class ultimoProducto extends React.Component {
             }) 
     }
  
+    refresh = () => {
+        // re-renders the component
+        window.location.reload(false);;
+      };
+    
+
+    
 render(){
     
         console.log("estoy renderizando prod");
@@ -62,7 +74,7 @@ render(){
                     <p><strong><u>Precio</u> : </strong> $ {ultimoProducto.precio}</p>
                     <p><strong><u>Costo</u> : </strong> $ {ultimoProducto.costo}</p>
                     <div className= "botondash">
-                    <button className= "botonActualizar" >Actualizar</button>
+                    <button className= "botonActualizar" onClick={ this.refresh } >Actualizar</button>
                     </div>
                     </div>
                 </div>
