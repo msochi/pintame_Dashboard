@@ -9,6 +9,7 @@ class ultimoProducto extends React.Component {
             loading: true,
             productos: {},
             ultimoProducto:{},
+            marca:{}
         }
     }
 
@@ -18,13 +19,15 @@ class ultimoProducto extends React.Component {
             .then(data => {
             
             let ultimo = data.data.products.pop();
+            console.log(ultimo.marcas)
              
                //console.log(data.data.products)
               // console.log(array)
                 this.setState({
                     isLoaded: true,
                     productos: data.data,
-                    ultimoProducto: ultimo,                     
+                    ultimoProducto: ultimo,
+                    marca: ultimo.marcas                     
                 })
             })
             .catch(error =>{
@@ -39,7 +42,7 @@ class ultimoProducto extends React.Component {
 render(){
     
         console.log("estoy renderizando prod");
-       const { error, isLoaded, productos, ultimoProducto } = this.state;   
+       const { error, isLoaded, productos, ultimoProducto, marca } = this.state;   
      
         return (
             <div class="col-lg-6 mb-4">
@@ -54,7 +57,7 @@ render(){
                     <div>
                     
                     <p> <strong><u>Sku N° </u> : </strong> {ultimoProducto.sku}</p>
-                    <p><strong><u>Marca</u> : </strong> {ultimoProducto.id_marca}</p>                   
+                    <p><strong><u>Marca</u> : </strong> {marca.marca}</p>                   
                     <p><strong><u>Título</u> : </strong>{ultimoProducto.titulo_producto}</p>
                     <p><strong><u>Precio</u> : </strong> $ {ultimoProducto.precio}</p>
                     <p><strong><u>Costo</u> : </strong> $ {ultimoProducto.costo}</p>
